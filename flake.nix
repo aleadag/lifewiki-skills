@@ -17,8 +17,9 @@
       flake-utils,
       obsidian-skills,
     }:
-    flake-utils.lib.eachDefaultSystem (
-      system:
+    let
+      mkOpenclawPlugin =
+        system:
       let
         pkgs = import nixpkgs { inherit system; };
         lib = pkgs.lib;
@@ -38,8 +39,7 @@
           in
           map (name: baseDir + "/${name}") (lib.filter isSkillDir names);
       in
-      {
-        openclawPlugin = {
+        {
           name = "lifewiki-skills";
           skills = (collectSkillPaths localSkillsDir) ++ (collectSkillPaths upstreamSkillsDir);
           packages = [ ];
@@ -48,9 +48,18 @@
             requiredEnv = [ "LIFEWIKI_VAULT" ];
           };
         };
-
+    in
+    (flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+      in
+      {
         devShells.default = pkgs.mkShellNoCC {
         };
       }
-    );
+    ))
+    // {
+      openclawPlugin = mkOpenclawPlugin;
+    };
 }
