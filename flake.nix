@@ -37,7 +37,7 @@
             isSkillDir =
               name: entries.${name} == "directory" && builtins.pathExists (baseDir + "/${name}/SKILL.md");
           in
-          map (name: baseDir + "/${name}") (lib.filter isSkillDir names);
+          map (name: builtins.unsafeDiscardStringContext (toString (baseDir + "/${name}"))) (lib.filter isSkillDir names);
       in
         {
           name = "lifewiki-skills";
