@@ -4,12 +4,13 @@ General OpenClaw skills for maintaining a Lifewiki vault built on the Obsidian w
 
 ## Included Skills
 
-This plugin packages four local skills:
+This plugin packages five local skills:
 
 - `/note` writes authored content into today's daily note
 - `/inbox` captures GTD-style inbox items into today's daily note
 - `/readlater` saves a URL into `_Sources`, adds it to the reading queue, and records intake in today's inbox
 - `/reading` reviews and updates the read-it-later queue
+- `/para-organize` reorganizes selected folders into `Projects`, `Areas`, `Resources`, and `Archives`
 
 It also packages selected upstream skills from `kepano/obsidian-skills` through `flake.nix`.
 
@@ -36,6 +37,7 @@ After installing the plugin in OpenClaw, invoke the skills with:
 /inbox Renew passport before June.
 /readlater https://example.com/article
 /reading Show unread items and move the BTC article to Reading.
+/para-organize Preview a PARA cleanup for `Inbox Imports/`.
 ```
 
 ## Skill Behavior
@@ -65,6 +67,13 @@ After installing the plugin in OpenClaw, invoke the skills with:
 - Reviews or updates `Read It Later.md`
 - Moves items between states such as Unread, Reading, Done, and Archived
 - Keeps `_Sources/` notes as the canonical content record
+
+### `/para-organize`
+
+- Reorganizes only user-specified folders, not the entire vault by default
+- Classifies content into `Projects`, `Areas`, `Resources`, and `Archives`
+- Previews planned moves before applying them unless the user explicitly requests immediate apply
+- Skips protected paths such as daily notes and `.obsidian`
 
 ## Nix
 
