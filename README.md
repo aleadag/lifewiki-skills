@@ -4,10 +4,11 @@ General OpenClaw skills for maintaining a Lifewiki vault built on the Obsidian w
 
 ## Included Skills
 
-This plugin packages six local skills:
+This plugin packages seven local skills:
 
 - `/note` writes authored content into today's daily note
 - `/inbox` captures GTD-style inbox items into today's daily note
+- `/daystart` bootstraps today's daily note and summarizes what to do
 - `/readlater` saves a URL into `_Sources`, adds it to the reading queue, and records intake in today's inbox
 - `/reading` reviews and updates the read-it-later queue
 - `/para-organize` reorganizes selected folders into the active PARA layout
@@ -36,6 +37,7 @@ After installing the plugin in OpenClaw, invoke the skills with:
 ```text
 /note Met with Dr. Wang, need to send the follow-up summary tomorrow.
 /inbox Renew passport before June.
+/daystart
 /readlater https://example.com/article
 /reading Show unread items and move the BTC article to Reading.
 /para-organize Preview a PARA cleanup for `Inbox Imports/`.
@@ -56,6 +58,14 @@ After installing the plugin in OpenClaw, invoke the skills with:
 - Writes actionable items into today's `## Inbox 📥`
 - Defaults to task checkboxes
 - Keeps entries short and easy to triage later
+
+### `/daystart`
+
+- Creates today's daily note from the template if it does not exist yet
+- Summarizes what to do today from open tasks in notes, unread items in `Read It Later.md`, and whether you practiced Kongfu yesterday
+- Writes a concise startup summary into today's `## Notes 📝` section
+- Returns the same summary in chat
+- Does not edit the query-driven `## Today 🔆`, `## Dashboard 🗺️`, or `## Logs 🪵` sections directly
 
 ### `/readlater`
 
