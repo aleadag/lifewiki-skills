@@ -82,6 +82,7 @@ Use one layout consistently for the entire run.
 3. Classify candidate files using the `para-organize` rules.
 4. Move files into the active PARA roots.
 5. Leave ambiguous items in place and report them.
+6. Treat GTD control lists such as `Someday Maybe`, `Wishlist`, `Backlog`, or `Incubation` as `Areas` or ambiguous by default, not `Archives`, unless the user explicitly asks to archive them.
 
 ## Failure handling
 

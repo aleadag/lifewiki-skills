@@ -41,6 +41,8 @@ Avoid queue and workflow notes unless the user explicitly includes them:
 
 - `$LIFEWIKI_VAULT/Read It Later.md`
 - `$LIFEWIKI_VAULT/_Sources/`
+- actively reviewed GTD control lists such as `Someday Maybe`, `Wishlist`, `Backlog`, or `Incubation`
+- periodic and system notes such as yearly, quarterly, monthly, or weekly dashboards in `$LIFEWIKI_VAULT/-Periodic-Notes/`
 
 ## PARA rules
 
@@ -48,6 +50,8 @@ Avoid queue and workflow notes unless the user explicitly includes them:
 - `Areas`: ongoing responsibilities without a natural finish
 - `Resources`: reference material, topic notes, reusable knowledge
 - `Archives`: inactive material from any of the other buckets
+- GTD control lists such as `Someday Maybe` are usually live system notes, not archives
+- periodic dashboard notes such as yearly reviews or yearly journals are system notes, not PARA content
 
 Organize by actionability rather than broad subject.
 
@@ -85,6 +89,9 @@ Organize by actionability rather than broad subject.
 - Prefer `Projects` over `Resources` when a note clearly supports active delivery.
 - Prefer `Areas` over `Projects` when the note describes steady responsibility rather than a finishable outcome.
 - Prefer `Resources` over `Archives` when the material still appears in active use.
+- Prefer `Areas` over `Archives` for actively reviewed GTD control lists such as `Someday Maybe`, `Wishlist`, `Backlog`, or `Incubation`.
+- Do not auto-archive a `Someday Maybe`-style note unless the note is clearly inactive or the user explicitly asks for it.
+- Treat yearly dashboard or journal notes as periodic/system notes and leave them in place instead of forcing a PARA bucket.
 - Otherwise leave the item in place and surface it as ambiguous.
 
 ## Failure handling
