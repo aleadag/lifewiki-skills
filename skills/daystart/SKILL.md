@@ -75,14 +75,19 @@ Because the daily note's task query blocks may not have rendered yet, derive the
 Task source scope:
 - scan Markdown files under `$LIFEWIKI_VAULT`, but exclude `$LIFEWIKI_VAULT/5-Templates/`, `$LIFEWIKI_VAULT/-Daily-Notes/`, `$LIFEWIKI_VAULT/_Sources/`, and `$LIFEWIKI_VAULT/Read It Later.md`
 - treat task-bearing files as any remaining Markdown file that contains open tasks or explicit in-progress task state in raw Markdown
+- treat project notes and area notes as in scope when they contain raw Markdown checkbox tasks, including files under `Projects/`, `1-Projects/`, `Areas/`, and `2-Areas/`
+- prefer concrete task lines from project notes when both a project note and a higher-level tracking note mention the same work
 - do not inspect attachments, rendered output, or non-Markdown files
 
 Primary task set:
 - open tasks whose explicit task metadata says they happen on or before today
 - tasks already in progress when that state is visible in raw Markdown
+- project notes with concrete tasks take precedence over rollup notes that only link to the project or name it as a single checklist item
 
 Fallback task set:
 - if no primary tasks match, include a small list of open unscheduled tasks
+- include plain open checkbox tasks from project notes even when they have no explicit date metadata
+- do not treat project index links as a substitute when the linked project note contains concrete open tasks
 - keep the fallback intentionally short
 
 ## Read-it-later summary model
