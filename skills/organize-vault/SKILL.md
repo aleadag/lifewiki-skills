@@ -47,6 +47,8 @@ Protected paths:
 
 - `$LIFEWIKI_VAULT/-Daily-Notes/`
 - `$LIFEWIKI_VAULT/.obsidian/`
+- `$LIFEWIKI_VAULT/5-Temples/`
+- `$LIFEWIKI_VAULT/_Scripts/`
 
 ## Workflow resolution
 
@@ -79,10 +81,11 @@ Use one layout consistently for the entire run.
 
 1. Resolve the requested source folders inside the vault.
 2. Refuse any path outside `$LIFEWIKI_VAULT`.
-3. Classify candidate files using the `para-organize` rules.
-4. Move files into the active PARA roots.
-5. Leave ambiguous items in place and report them.
-6. Treat GTD control lists such as `Someday Maybe`, `Wishlist`, `Backlog`, or `Incubation` as `Areas` or ambiguous by default, not `Archives`, unless the user explicitly asks to archive them.
+3. Skip protected paths.
+4. Classify candidate files using the `para-organize` rules.
+5. Move files into the active PARA roots.
+6. Leave ambiguous items in place and report them.
+7. Treat GTD control lists such as `Someday Maybe`, `Wishlist`, `Backlog`, or `Incubation` as `Areas` or ambiguous by default, not `Archives`, unless the user explicitly asks to archive them.
 
 ## Failure handling
 
