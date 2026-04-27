@@ -9,7 +9,7 @@ This plugin packages seven local skills:
 - `/note` writes authored content into today's daily note
 - `/inbox` captures GTD-style inbox items into today's daily note
 - `/daystart` bootstraps today's daily note and summarizes what to do
-- `/readlater` saves a URL into `_Sources`, adds it to the reading queue, and records intake in today's inbox
+- `/readlater` saves a URL into `_Sources` and adds it to the reading queue
 - `/reading` reviews and updates the read-it-later queue
 - `/para-organize` reorganizes selected folders into the active PARA layout
 - `/organize-vault` runs named maintenance workflows such as `read-it-later` and `para-cleanup`
@@ -72,7 +72,7 @@ After installing the plugin in OpenClaw, invoke the skills with:
 - Creates a canonical Markdown note in `_Sources/`
 - Stores source URL, capture timestamp, status, and captured content when available
 - Adds an unread entry to `Read It Later.md`
-- Adds a same-day intake item to today's inbox
+- Does not create a duplicate todo item in today's daily note
 
 ### `/reading`
 

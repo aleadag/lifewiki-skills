@@ -40,9 +40,9 @@ Alternative considered: storing only a task or only a queue note. This was rejec
 
 ### Maintain the read-it-later queue in a dedicated Markdown index
 
-The queue will live in a stable Markdown note rather than only in daily-note inbox entries. Daily-note capture remains useful for same-day awareness, but the dedicated queue is the durable review surface for unread, in-progress, and completed items.
+The queue will live in a stable Markdown note rather than daily-note inbox entries. A same-day daily note may include a non-task note or link when useful, but the dedicated queue is the durable review surface for unread, in-progress, and completed items.
 
-Alternative considered: using only daily-note inbox entries as the queue. This was rejected because items would become fragmented across dates and harder to review systematically.
+Alternative considered: using daily-note inbox tasks as the queue or as a duplicate intake record. This was rejected because items would become fragmented across dates, harder to review systematically, and duplicated in task queries.
 
 ### Package upstream Obsidian skills as a flake input
 

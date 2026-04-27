@@ -29,9 +29,15 @@ The system SHALL maintain a dedicated read-it-later queue in Markdown that track
 - **WHEN** an agent reviews or finishes a queued read-it-later item
 - **THEN** the system updates the queue entry to reflect the new reading state without duplicating article content outside `_Sources`
 
-### Requirement: Read-it-later capture records same-day intake in the daily inbox
-The system SHALL add a daily-note inbox entry for each newly captured read-it-later item so same-day review includes the intake event.
+### Requirement: Read-it-later capture avoids duplicate daily-note todos
+The system SHALL NOT create a daily-note todo item for a newly captured read-it-later item because the dedicated queue already tracks unread reading work.
 
-#### Scenario: Link captured on the current day
+#### Scenario: Link captured for later reading
 - **WHEN** a read-it-later URL is captured successfully or partially successfully
-- **THEN** the system appends an inbox item to the current daily note that references the queued reading item
+- **THEN** the system adds the item to the dedicated read-it-later queue
+- **AND** the system does not append a task checkbox for that item to the current daily note
+
+#### Scenario: Same-day note reference is useful
+- **WHEN** an agent records the capture in the current daily note
+- **THEN** the entry is a plain note or link to the source note
+- **AND** the entry is not a todo item

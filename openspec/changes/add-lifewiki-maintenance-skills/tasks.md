@@ -14,7 +14,7 @@
 
 - [x] 3.1 Implement read-it-later capture instructions for creating canonical `_Sources/` notes with normalized metadata and source URLs
 - [x] 3.2 Implement queue-maintenance instructions for adding and updating Markdown task entries that track unread and in-progress reading items
-- [x] 3.3 Implement daily inbox registration for newly captured links and define behavior for partial or failed content capture
+- [x] 3.3 Define same-day read-it-later capture without duplicating queue entries as daily-note todo items
 
 ## 4. Packaging and verification
 

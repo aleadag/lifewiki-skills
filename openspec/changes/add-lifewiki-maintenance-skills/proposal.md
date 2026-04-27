@@ -7,7 +7,7 @@ The current repository has no lifewiki-specific agent skills even though the tar
 - Add a Markdown-first skill set for maintaining a lifewiki built on the Obsidian workflow template.
 - Define capture behavior for daily-note entries so agents write only to authored sections such as `## Notes 📝` and `## Inbox 📥`.
 - Define GTD inbox capture behavior that appends actionable items to the current daily note rather than creating ad hoc inbox files.
-- Define read-it-later capture behavior that stores fetched article content as Markdown notes in `_Sources/`, tracks unread items in a maintained reading list, and records capture in the daily note inbox.
+- Define read-it-later capture behavior that stores fetched article content as Markdown notes in `_Sources/` and tracks unread items in a maintained reading list without duplicating them as daily-note todo items.
 - Package the repository’s local skills together with curated upstream Obsidian skills from `kepano/obsidian-skills` through `flake.nix`.
 
 ## Capabilities
